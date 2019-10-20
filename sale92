@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+float sum, sale, result, liter; // сумма, продажа со скидкой, литров
+int main() {
+  liter = 41.45; // цена 92 бензина
+  cout << "Введите сумму: ";
+  cin >> sum;
+  if (sum < 500){
+    result = sum / liter; // Количество литров с суммы
+    cout << "Литров: " << result  << endl << "Цена за литр: " << liter << endl << "Цена с учетом скидки: " << sale << endl << "Итог: " << sum << endl ;
+  }
+  else if (sum >= 500 && sum < 1000){
+    sale = liter - 0.5; // Цена с учетом скидки 0.5р
+    result = sum / sale; // Количество литров по скидке 0.5р
+    cout << "Литров: " << result  << endl << "Цена за литр: " << liter << endl << "Цена с учетом скидки: " << sale << endl << "Итог: " << sum << endl ;
+  }
+  else if (sum >= 1000){
+    sale = liter - 1; // Цена с учетом скидки 1р
+    result = sum / sale; // Количество литров по скидке 1р
+    cout << "Литров: " << result  << endl << "Цена за литр: " << liter << endl << "Цена с учетом скидки: " << sale << endl << "Итог: " << sum << endl ;
+  }
+} 
